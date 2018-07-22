@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+
+<p id = "demo">1</p>
+<p id="demo2">1</p>
+
+<script type="text/javascript">
+	
+
+var str = '['
++'{"name":"111","age":"222"},'
++'{"name":"333","age":"444"}]';
+
+
+var str2 = '{"employees":['
++'{"name":"111","age":"222"},'
++'{"name":"333","age":"444"}]}';
+
+
+var obj=JSON.parse(str);
+var obj2=JSON.parse(str2);
+document.getElementById("demo").innerHTML = obj[0].name;
+document.getElementById("demo2").innerHTML = obj2.employees[0].name;
+
+</script>
+
+
+
+
+</body>
+</html>
